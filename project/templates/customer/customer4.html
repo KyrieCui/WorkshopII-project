@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Customer</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="static/customer/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="static/customer/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="static/customer/css/font-awesome.css" rel="stylesheet">
+	<link href="static/customer/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="static/customer/css/jquery-ui1.css">
+</head>
+
+<body>
+	<img src="static/customer/logo.jpg" id="logo">
+	<div class="header-bot">
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<!-- header-bot-->
+			<div class="col-md-4 logo_agile"></br>
+				<h1 style="font-size:50px">
+					<i>
+						<span>得</span>一
+						<span>D</span>eYi						
+					</i>				
+				</h1>
+			</div>
+			<div class="col-md-8 header"></br>
+				<div class="agileits_search">
+					<form action="search" method="POST">
+						<input name="keyword" type="search" placeholder="Search Goods Here!" required="">
+						<button type="submit" class="btn btn-default" aria-label="Left Align">  <!-- 这里是search按钮！ -->
+							<span class="fa fa-search" aria-hidden="true"> </span>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-5 col-md-6">
+		<table>
+		<tr>
+		<td>				
+			<a href="shoppingcart" class="btn btn-success btn-lg">shopping cart</a>						
+		</td>
+		<td>
+			<a href="customer history" class="btn btn-info btn-lg">History Order</a>
+		</td>
+		<td>
+			<form method="post" action="/logout">
+				<button type="submit" class="btn btn-default btn-lg">LogOut</button>
+			</form>
+		</td>
+		</tr>
+		</table>
+		</div>
+	</div></br>
+
+	<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Big
+							<span>Save</span>
+						</h3>
+						<p>Get flat
+							<span>10%</span> Cashback</p>						
+					</div>
+				</div>
+			</div>
+			<div class="item item2">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Healthy
+							<span>Saving</span>
+						</h3>
+						<p>Get Upto
+							<span>30%</span> Off</p>
+					</div>
+				</div>
+			</div>
+			<div class="item item3">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Big
+							<span>Deal</span>
+						</h3>
+						<p>Get Best Offer Upto
+							<span>20%</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item item4">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Today
+							<span>Discount</span>
+						</h3>
+						<p>Get Now
+							<span>40%</span> Discount</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<!-- //banner -->
+
+	<!-- Products -->
+	<div class="ads-grid">
+		<div class="container">
+			<div class="side-bar col-md-3">								
+				<!-- food preference -->
+				<div class="left-side" style="font-size:30px">
+					<h3 class="agileits-sear-head" style="font-size:30px">Type</h3>
+					<ul>
+						<li>
+							<span class="span" style="font-size:17px"><a href="drink">Drink</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="snack">Snack</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="fruit">Fruit</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="daily">Daily</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="sport">Sport</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="stationery">Stationery</a></span>
+						</li>
+						<li>
+							<span class="span" style="font-size:17px"><a href="customer1">All</a></span>
+						</li>
+					</ul>
+				</div>			
+			</div>
+			<!-- //product left -->
+			<!-- product right -->
+			<div class="agileinfo-ads-display col-md-9">
+				<div class="wrapper">
+					<div class="product-sec1">
+						<h3 class="heading-tittle">Sports</h3>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/table tennis racket.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>table tennis racket</h4>
+									<div class="info-product-price">
+										<span class="item_price">40.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="table tennis racket" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/tennis.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>tennis</h4>
+									<div class="info-product-price">
+										<span class="item_price">10.00 ￥</span>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="tennis" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/tennis racket.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>tennis racket</h4>
+									<div class="info-product-price">
+										<span class="item_price">200.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="tennis racket" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="product-sec1">
+					<h3 class="heading-tittle">Stationery</h3>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/pencil.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>pencil</h4>
+									<div class="info-product-price">
+										<span class="item_price">6.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="pencil" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/rubber.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>rubber</h4>
+									<div class="info-product-price">
+										<span class="item_price">5.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="rubber" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/ruler.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>ruler</h4>
+									<div class="info-product-price">
+										<span class="item_price">8.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="ruler" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="product-sec1">
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/Signature pen.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>pen</h4>
+									<div class="info-product-price">
+										<span class="item_price">15.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="pen" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/pen.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>Signature pen</h4>
+									<div class="info-product-price">
+										<span class="item_price">5.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Signature pen" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="static/customer/images/Pencil case.jpg" alt="" width="200px" height="230px">
+								</div>
+								<div class="item-info-product ">
+									<h4>Pencil case</h4>
+									<div class="info-product-price">
+										<span class="item_price">25.00 ￥</span>							
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Pencil case" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+														
+				</div>
+			</div>
+			<!-- //product right -->
+		</div>
+		<nav class="col-md-4 col-md-offset-6">
+            <ul class="pagination">
+              <li><span aria-hidden="true">&laquo;</span></li>
+              <li class=""><a href="1">1 <span class="sr-only">(current)</span></a></li>
+              <li class=""><a href="2">2 <span class="sr-only">(current)</span></a></li>
+              <li class=""><a href="3">3 <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="4">4 <span class="sr-only">(current)</span></a></li>
+              <li><span aria-hidden="true">»</span></li>
+            </ul>
+        </nav>
+	</div>
+
+	<!-- special offers -->
+	<div class="featured-section" id="projects">
+		<div class="container">
+			<h3 class="tittle-w3l">Hot Offers
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- 特殊商品 -->
+			<div class="content-bottom-in">
+				<ul id="flexiselDemo1">
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Sprite.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Sprite</h4>
+								<div class="w3l-pricehkj">
+									<h6>3.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Sprite" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Sarsae.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Sarsae</h4>
+								<div class="w3l-pricehkj">
+									<h6>5.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Sarsae" name="add">Add into cart</button>
+											</fieldset>
+										</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Litchi.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Litchi</h4>
+								<div class="w3l-pricehkj">
+									<h6>15.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Litchi" name="add">Add into cart</button>
+											</fieldset>
+										</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/pineapple.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>pineapple</h4>
+								<div class="w3l-pricehkj">
+									<h6>30.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="pineapple" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Chicken Feet with Pickled Peppers.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Chicken Feet with Pickled Peppers</h4>
+								<div class="w3l-pricehkj">
+									<h6>6.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Chicken Feet with Pickled Peppers" name="add">Add into cart</button>
+											</fieldset>
+										</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Laver.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Laver</h4>
+								<div class="w3l-pricehkj">
+									<h6>4.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Laver" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Liquid soap.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Liquid soap</h4>
+								<div class="w3l-pricehkj">
+									<h6>20.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Liquid soap" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/toothpaste.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>toothpaste</h4>
+								<div class="w3l-pricehkj">
+									<h6>5.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="toothpaste" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/basketball.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>basketball</h4>
+								<div class="w3l-pricehkj">
+									<h6>200.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="basketball" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/football.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>football</h4>
+								<div class="w3l-pricehkj">
+									<h6>150.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="football" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/ear phone.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>ear phone</h4>
+								<div class="w3l-pricehkj">
+									<h6>70.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="ear phone" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single.html">
+									<img src="static/customer/images/Battery.jpg" alt="" width="200px" height="230px">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>Battery</h4>
+								<div class="w3l-pricehkj">
+									<h6>30.00 ￥</h6>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="/add" method="post">
+											<fieldset>
+												<p>Amount:</p><input type="text" name="number">
+												</br></br>
+												<button class="btn btn-info btn-lg" type="submit" value="Battery" name="add">Add into cart</button>
+											</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="static/customer/js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+
+	<!-- popup modal (for signin & signup)-->
+	<script src="static/customer/js/jquery.magnific-popup.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- Large modal -->
+	<!-- <script>
+		$('#').modal('show');
+	</script> -->
+	<!-- //popup modal (for signin & signup)-->
+
+	<!-- cart-js -->
+	<script src="static/customer/js/minicart.js"></script>
+	<script>
+		paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
+
+		paypalm.minicartk.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+
+	<!-- price range (top products) -->
+	<script src="static/customer/js/jquery-ui.js"></script>
+	<script>
+		//<![CDATA[ 
+		$(window).load(function () {
+			$("#slider-range").slider({
+				range: true,
+				min: 0,
+				max: 9000,
+				values: [50, 6000],
+				slide: function (event, ui) {
+					$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+				}
+			});
+			$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+		}); //]]>
+	</script>
+	<!-- //price range (top products) -->
+
+	<!-- flexisel (for special offers) -->
+	<script src="static/customer/js/jquery.flexisel.js"></script>
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 1
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+
+		});
+	</script>
+	<!-- //flexisel (for special offers) -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- smoothscroll -->
+	<script src="static/customer/js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="static/customer/js/move-top.js"></script>
+	<script src="static/customer/js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+
+	<!-- for bootstrap working -->
+	<script src="static/customer/js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+
+
+</body>
+
+</html>
